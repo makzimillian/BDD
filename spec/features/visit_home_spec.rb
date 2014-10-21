@@ -5,4 +5,13 @@ feature 'Visit the home page' do |variable|
     visit '/'
     expect(page).to have_content 'Hello World!'
   end
+
+
+scenario 'Privacy' do
+  visit root_path
+  click_link 'Privacy'
+  expect(page).to have_content 'Privacy'
+
+
+
 end

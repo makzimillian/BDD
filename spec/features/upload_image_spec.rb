@@ -13,6 +13,8 @@ feature 'Visit the image uploader page' do
     click_button 'Create Food item'
     expect(page).to have_content 'Food item was successfully created'
     expect(page).to have_content 'Chicken'
+
+    expect(page).to have_content 'Picture'
   end
 
   scenario 'Show the image'

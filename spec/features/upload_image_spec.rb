@@ -3,16 +3,15 @@ require 'rails_helper'
 feature 'Visit the image uploader page' do
   scenario 'Upload Image!' do
     visit '/'
-    vist route_path
     expect(page).to have_content 'Image Uploader'
   end
 
 
-  scenario 'Upload Succesful'
+  scenario 'Upload Succesful' do
     visit new_food_item_path
     fill_in 'Name', :with => 'Chicken'
-    click_button 'Create Food Item'
-    expect(page).to have_content 'New food_item'
+    click_button 'Create Food item'
+    expect(page).to have_content 'Food item was successfully created'
     expect(page).to have_content 'Chicken'
   end
 
